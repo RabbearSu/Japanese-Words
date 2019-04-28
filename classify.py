@@ -2,7 +2,7 @@
 """
     File Name:      classify.py
     Description:    按照字段进行分类
-    Author:         Yange Cao
+    Author:         RabbearSu
     creation date:  2019/4/28
 """
 import os

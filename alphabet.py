@@ -2,7 +2,7 @@
 """
     File Name:      alphabet.py
     Description:    所有分类字段
-    Author:         Yange Cao
+    Author:         RabbearSu
     creation date:  2019/4/28
 """
 

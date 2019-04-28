@@ -2,7 +2,7 @@
 """
     File Name:      get_excel.py
     Description:    获取词条字典
-    Author:         Yange Cao
+    Author:         RabbearSu
     creation date:  2019/4/28
 """
 import pandas as pd
