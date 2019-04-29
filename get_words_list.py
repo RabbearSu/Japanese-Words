@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-    File Name:      get_excel.py
+    File Name:      get_words_list.py
     Description:    获取词条字典
-    Author:         RabbearSu
+    Author:         Rabbear Su
     creation date:  2019/4/28
 """
 import pandas as pd
-
+from tqdm import tqdm
 
 # 获取所有词条并添加入列表
 def get_all_words(path):
@@ -19,7 +19,8 @@ def get_all_words(path):
     pd_frame = pd.read_excel(path)
     # 建立词条列表
     word_list = []
-    for i in range(len(pd_frame)):
+    print('\n---start generating word_list---')
+    for i in tqdm(range(len(pd_frame))):
         # 建立该词条字典
         word_dict = {}
 
@@ -35,7 +36,7 @@ def get_all_words(path):
             word_dict['意思'] = meaning
             word_dict['类型'] = word_type
             word_list.append(word_dict)
-
+    print('\n---finish generating word_list---')
     return word_list
 
 

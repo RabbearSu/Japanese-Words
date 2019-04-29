@@ -2,10 +2,10 @@
 """
     File Name:      alphabet.py
     Description:    所有分类字段
-    Author:         RabbearSu
+    Author:         Rabbear Su
     creation date:  2019/4/28
 """
-
+from tqdm import tqdm
 
 class Alpha(object):
     def __init__(self):
@@ -154,13 +154,15 @@ class Alpha(object):
         :param word_list:
         :return:
         """
-        for entry in word_list:
+        print('\n---start classifying---')
+        for entry in tqdm(word_list):
             kana = entry['假名']
             # 判断字段是否在假名中
             for i, j in vars(self).items():
                 name = list(j)[0]
                 if name in kana:
                     getattr(self, i)[name].append(entry)
+        print('\n---finish classifying---')
 
     def list_all(self):
         """
