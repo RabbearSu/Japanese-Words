@@ -163,10 +163,18 @@ class Alpha(object):
                     getattr(self, i)[name].append(entry)
 
     def list_all(self):
+        """
+        列出每个字段和其对应的所有词条
+        :return:
+        """
         for i, j in vars(self).items():
             print('字段:{}, 列表:{}'.format(i, j))
 
     def get_length(self):
+        """
+        列出每个字段所包含的词条数目
+        :return:
+        """
         for i, j in vars(self).items():
             name = list(j)[0]
             entry_list = list(j.values())[0]
