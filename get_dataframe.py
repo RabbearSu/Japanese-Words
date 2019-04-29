@@ -24,9 +24,9 @@ def get_df(alpha):
             word_type = entry['类型']
 
             # 判断是否有类型
-            if isinstance(word_type, str):
+            if isinstance(word_type, str) and word_type != '专有词':
                 df = df.append({'假名': kana, '日文': jp_words, '意思': meaning, '类型': word_type}, ignore_index=True)
-            else:
+            elif isinstance(word_type, str) is False:
                 df = df.append({'假名': kana, '日文': jp_words, '意思': meaning, '类型': ''}, ignore_index=True)
 
         df = df.append({'假名': '', '日文': '', '意思': '', '类型': ''}, ignore_index=True)
