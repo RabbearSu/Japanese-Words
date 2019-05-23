@@ -9,7 +9,7 @@ from get_words_list import get_all_words
 from alphabet import Alpha
 from get_dataframe import get_df
 
-excel_path = 'jp_zhongji.xlsx'
+excel_path = 'data\\jp_zhongji.xlsx'
 
 # 获取所有词条
 word_list = get_all_words(excel_path)
