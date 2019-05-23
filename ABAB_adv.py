@@ -29,6 +29,10 @@ for i, line in enumerate(lines):
                            ignore_index=True)
 
     if i % 2 != 0:
-        df.iloc[index]['例句'] = line.split('／')[0].split('：')[1]
-        df.iloc[index]['例句意思'] = line.split('／')[1]
-        print(df)
+        try:
+            df.iloc[index]['例句'] = line.split('／')[0].split('：')[1]
+            df.iloc[index]['例句意思'] = line.split('／')[1]
+        except:
+            df.iloc[index]['例句'] = line.split('：')[1]
+
+df.to_excel('output\\ABAB.xlsx')
